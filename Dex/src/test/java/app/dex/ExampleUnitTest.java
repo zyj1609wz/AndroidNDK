@@ -1,4 +1,4 @@
-package com.ndk.app;
+package app.dex;
 
 import org.junit.Test;
 

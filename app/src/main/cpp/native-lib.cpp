@@ -1,6 +1,7 @@
 #include <jni.h>
 #include <string>
 
+
 extern "C"
 jstring
 Java_com_ndk_app_MainActivity_stringFromJNI(
