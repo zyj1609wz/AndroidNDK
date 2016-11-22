@@ -1,1 +1,1 @@
-include ':app', ':Dex'
+include ':app', ':Dex', ':Dexlib', ':JNI1'

@@ -1,26 +1,27 @@
 #include <jni.h>
 #include <string>
-#include <syslog.h>
 
+extern "C"{
 
-extern "C"
-jstring
-Java_com_ndk_app_BaseJNI_stringFromJNI(
-        JNIEnv* env,
+jstring Java_com_ndk_app_BaseJNI_stringFromJNI(
+        JNIEnv* env ,
         jobject /* this */) {
     std::string hello = "Hello from C++";
-    printf( "%s" , "hello" ) ;
+    return env->NewStringUTF(hello.c_str());
+}
 
-    LOGV( "" , "" ) ;
-    //创建一个jstring对象使用
-    jstring jstring1 =  (*env).NewStringUTF( "hello world" ) ;
+jstring Java_com_ndk_app_BaseJNI_stringFromJNI2(
+        JNIEnv* env, jobject ) {
+    std::string hello = "Hello from C++22";
+    return env->NewStringUTF(hello.c_str());
+}
+
+jstring Java_com_ndk_app_BaseJNI_stringFromJNI3(
+        JNIEnv *env, jobject obj
+){
+    std::string hello = "123";
 
     return env->NewStringUTF(hello.c_str());
 }
 
-
-jstring Java_com_ndk_app_BaseJNI_stringFromJNI2(
-        JNIEnv* env, jclass jclass1 ,jstring  ss) {
-    std::string hello = "Hello from C++22";
-    return env->NewStringUTF(hello.c_str());
 }
