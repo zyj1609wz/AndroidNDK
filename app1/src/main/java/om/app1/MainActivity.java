@@ -21,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         //从Java 获取属性值
         textView1.setText( new NativeUitl().getStringFromJava()  );
 
-        textView2.setText( new NativeUitl().setStringFromJava() );
+        //字符串拼接
+        NativeUitl nativeUitl = new NativeUitl() ;
+        textView2.setText( nativeUitl.setStringFromJava()  + "  " + nativeUitl.name );
 
+      //  new NativeUitl().getMethodFromJava() ;
     }
 }

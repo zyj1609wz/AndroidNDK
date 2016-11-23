@@ -7,8 +7,8 @@ extern "C" {
 /**
  * 从java 类中获取属性的值
  */
-JNIEXPORT jstring JNICALL Java_om_app1_NativeUitl_getStringFromJava(
-        JNIEnv *env, jobject object) {
+ jstring Java_om_app1_NativeUitl_getStringFromJava(
+        JNIEnv *env, jobject object ) {
     // 得到jclass
     jclass jcls = env->GetObjectClass( object ) ;
 
@@ -24,23 +24,51 @@ JNIEXPORT jstring JNICALL Java_om_app1_NativeUitl_getStringFromJava(
 /**
  * 改写Java类中属性值
  */
-JNIEXPORT jstring JNICALL Java_om_app1_NativeUitl_setStringFromJava(
-        JNIEnv *env, jobject object) {
+ jstring Java_om_app1_NativeUitl_setStringFromJava(
+        JNIEnv *env, jobject object ) {
 
-    // 从java 类中获取属性的值
-    jstring js = Java_om_app1_NativeUitl_getStringFromJava( env , object ) ;
+    // 得到jclass
+    jclass jcls = env->GetObjectClass( object ) ;
+
+    // 得到字段ID
+    jfieldID jfID = env->GetFieldID( jcls , "name" , "Ljava/lang/String;" );
+
+    // 得到字段的值
+    jstring s1 = (jstring) env->GetObjectField(object , jfID  );
 
     // 将jstring类型转换成字符指针
-    char * cstr = (char *) env->GetStringUTFChars(js , JNI_FALSE );
+    char * cstr = (char *) env->GetStringUTFChars( s1  , JNI_FALSE );
 
     //定义需要改写的值
-    char text[30] = "";
+    char text[30] = "1234";
 
     //字符串拼接，在text的后面拼接 cstr 数组。拼接的结果放在 text数组中
-    //所以这里有一个坑，外部的字符串的大小是动态变化的，所以需要动态来定义text数组的长度。优化方案，详见setStringFromJava2方法
     strcat(text, cstr);
 
-    return env->NewStringUTF( text )  ;
+    jstring s2 = env->NewStringUTF( text ) ;
+
+    //给Java类中的字段赋值
+    env->SetObjectField( object , jfID , s2 ) ;
+
+    return s2 ;
 }
+
+/**
+* 改写Java类中属性值
+*/
+ void Java_om_app1_NativeUitl_getMethodFromJava(
+        JNIEnv *env, jobject object ) {
+
+    // 得到jclass
+    jclass jcls = env->GetObjectClass( object ) ;
+
+    // 得到方法ID
+    jmethodID jmtdId = env->GetMethodID( jcls , "run", "(I)I");
+
+    //执行方法
+    env->CallCharMethod( object , jmtdId  ) ;
+
+}
+
 
 }
