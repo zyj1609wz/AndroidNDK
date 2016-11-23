@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
 public class MainActivity extends AppCompatActivity {
 
     TextView textView1 , textView2 ,textView3  ;
@@ -17,7 +18,10 @@ public class MainActivity extends AppCompatActivity {
         textView2 = (TextView) findViewById( R.id.tv2 );
         textView3 = (TextView) findViewById( R.id.tv3 );
 
-        textView1.setText( NativeUitl.getStringFromC()  );
+        //从Java 获取属性值
+        textView1.setText( new NativeUitl().getStringFromJava()  );
+
+        textView2.setText( new NativeUitl().setStringFromJava() );
 
     }
 }

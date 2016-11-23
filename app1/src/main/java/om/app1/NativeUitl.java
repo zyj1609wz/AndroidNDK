@@ -6,10 +6,14 @@ package om.app1;
 
 public class NativeUitl {
 
+    public String name = "zeno" ;
+
     static {
         System.loadLibrary( "main");
     }
 
-    public static native String getStringFromC() ;
+    public native String getStringFromJava() ;
+
+    public native String setStringFromJava() ;
 
 }

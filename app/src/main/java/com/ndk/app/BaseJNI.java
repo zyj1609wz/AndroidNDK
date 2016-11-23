@@ -12,8 +12,7 @@ public class BaseJNI {
 
     public static native String stringFromJNI();
 
-    public static native String stringFromJNI2();
-
     public static native int getStringSize( String string) ;
 
+    public static native String stringTostring( String s1 , String s2) ;
 }

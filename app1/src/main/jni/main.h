@@ -4,11 +4,4 @@
 
 #ifndef ANDROIDNDK_MAIN_H
 #define ANDROIDNDK_MAIN_H
-
-
-class main {
-
-};
-
-
 #endif //ANDROIDNDK_MAIN_H
