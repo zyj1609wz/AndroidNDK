@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
         NativeUitl nativeUitl = new NativeUitl() ;
         textView2.setText( nativeUitl.setStringFromJava()  + "  " + nativeUitl.name );
 
-      //  new NativeUitl().getMethodFromJava() ;
+        new NativeUitl().getMethodFromJava() ;
+
+        //哈哈哈
+
+       // 哈哈 1
     }
 }
