@@ -4,7 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidNDK.iml" filepath="$PROJECT_DIR$/AndroidNDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/Dex/Dex.iml" filepath="$PROJECT_DIR$/Dex/Dex.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dexlib/Dexlib.iml" filepath="$PROJECT_DIR$/Dexlib/Dexlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JNI1/JNI1.iml" filepath="$PROJECT_DIR$/JNI1/JNI1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app1/app1.iml" filepath="$PROJECT_DIR$/app1/app1.iml" />
     </modules>
   </component>
 </project>

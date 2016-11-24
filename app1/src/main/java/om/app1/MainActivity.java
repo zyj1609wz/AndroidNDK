@@ -27,16 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
         new NativeUitl().getMethodFromJava() ;
 
-        //哈哈哈
+      //最新版
+        //最新版
+        //最新版
+        //最新版
 
-       // 哈哈 1
-
-        // 哈哈 2
-
-       // asas
-
-        // 哈哈 3
-
-        //哈哈4
     }
 }

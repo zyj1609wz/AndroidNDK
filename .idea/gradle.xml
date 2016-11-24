@@ -9,7 +9,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Dex" />
+            <option value="$PROJECT_DIR$/Dexlib" />
+            <option value="$PROJECT_DIR$/JNI1" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app1" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
