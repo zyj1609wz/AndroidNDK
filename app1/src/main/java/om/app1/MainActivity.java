@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         //从Java 获取属性值
         textView1.setText( new NativeUitl().getStringFromJava()  );
 
-        //字符串拼接
+        //字符串拼接dsd
         NativeUitl nativeUitl = new NativeUitl() ;
         textView2.setText( nativeUitl.setStringFromJava()  + "  " + nativeUitl.name );
 
